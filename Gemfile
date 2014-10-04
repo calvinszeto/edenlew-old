@@ -21,3 +21,6 @@ gem 'pg'
 
 # Annotates models
 gem 'annotate'
+
+# For uploading files
+gem 'carrierwave'
