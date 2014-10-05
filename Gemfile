@@ -24,3 +24,7 @@ gem 'annotate'
 
 # For uploading files
 gem 'carrierwave'
+
+group :development do
+	gem 'bower-rails'
+end
