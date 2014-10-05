@@ -11,4 +11,5 @@
 
 class Project < ActiveRecord::Base
 	has_many :images
+  has_many :categories, through: :categorizations
 end
