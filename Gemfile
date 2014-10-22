@@ -25,6 +25,9 @@ gem 'annotate'
 # For uploading files
 gem 'carrierwave'
 
+# For loading angular templates
+gem 'angular-rails-templates'
+
 group :development do
 	gem 'bower-rails'
 end

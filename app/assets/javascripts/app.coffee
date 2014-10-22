@@ -1,2 +1,2 @@
-app = angular.module 'edenlew',
-    []
+@app = angular.module 'edenlew',
+    ['templates']
