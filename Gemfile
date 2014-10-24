@@ -31,3 +31,12 @@ gem 'angular-rails-templates'
 group :development do
 	gem 'bower-rails'
 end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'pry'
+end
+
+group :test do
+  gem 'factory_girl'
+end
