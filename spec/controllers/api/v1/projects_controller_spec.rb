@@ -1,4 +1,6 @@
-describe Api::V1::ProjectsController do
+require "rails_helper"
+
+RSpec.describe Api::V1::ProjectsController do
   context "GET /api/v1/projects/" do
     before(:each) do
       (1..3).each do |_|
@@ -8,8 +10,9 @@ describe Api::V1::ProjectsController do
     end
 
     it "should return all projects" do
-      get api_v1_projects_path
+      get :index, format: :json
       expect(response.status).to eq(200)
+      expect(assigns(:projects)).to eq(@projects)
     end
   end
 end
