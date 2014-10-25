@@ -1,1 +1,24 @@
-{{projects}}
+<a class="btn">New Project</a>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Categories</th>
+            <th>Start Date</th>
+            <th>Finish Date</th>
+            <th>Created At</th>
+            <th>Last Updated</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-class="{invisible: !project.visible}"
+            ng-repeat="project in projects">
+            <td>{{project.name}}</td>
+            <td>{{project.categories}}</td>
+            <td>{{project.start_date}}</td>
+            <td>{{project.finish_date}}</td>
+            <td>{{project.created_at}}</td>
+            <td>{{project.updated_at}}</td>
+        </tr>
+    </tbody>
+</table>

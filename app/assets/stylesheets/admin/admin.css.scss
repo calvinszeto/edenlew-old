@@ -1,3 +1,26 @@
 #admin-header {
+  font-size: 10px;
+  padding: 1.414em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
 
+  img {
+    width: 3.998em;
+    border-radius: 1em;
+    margin-right: 1.414em;
+  }
+
+  h2 {
+    font-size: 3.998em;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  border-bottom: 3px double black;
+}
+
+#admin-body {
+  padding: 1.414em;
 }
