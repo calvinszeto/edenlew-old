@@ -6,13 +6,33 @@ RSpec.describe Api::V1::ProjectsController do
       (1..3).each do |_|
         create(:project)
       end
-      @projects = Project.all
+      (1..3).each do |_|
+        create(:project, visible: true)
+      end
+      @projects = Project.where(visible: true)
     end
 
-    it "should return all projects" do
+    it "should return all visible projects" do
       get :index, format: :json
       expect(response.status).to eq(200)
       expect(assigns(:projects)).to eq(@projects)
+    end
+  end
+
+  context "GET /api/v1/project/:id" do
+    before(:each) do
+      @project = create(:project)
+    end
+
+    it "should return the project if visible" do
+      @project.update_attribute :visible, true
+      get :show, id: @project.id, format: :json
+      expect(response.status).to eq(200)
+    end
+
+    it "should return a 404 if the project is not visible" do
+      get :show, id: @project.id, format: :json
+      expect(response.status).to eq(404)
     end
   end
 end

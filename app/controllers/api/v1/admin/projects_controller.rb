@@ -1,6 +1,6 @@
 class ProjectsController < ApiController
   layout false
-  before_filter get_project, only: [:show, :update, :destroy]
+  before_filter :get_project, only: [:show, :update, :destroy]
 
   def index
     @projects = Project.all

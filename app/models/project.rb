@@ -7,6 +7,9 @@
 #  start_date  :date
 #  finish_date :date
 #  content     :text
+#  visible     :boolean          default(FALSE)
+#  created_at  :datetime
+#  updated_at  :datetime
 #
 
 class Project < ActiveRecord::Base

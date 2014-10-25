@@ -7,11 +7,15 @@
 #  start_date  :date
 #  finish_date :date
 #  content     :text
+#  visible     :boolean          default(FALSE)
+#  created_at  :datetime
+#  updated_at  :datetime
 #
 
 FactoryGirl.define do
   factory :project do
-    name "project"
-    content "content"
+    name 'project'
+    content 'content'
+    visible false
   end
 end
