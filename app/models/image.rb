@@ -2,10 +2,10 @@
 #
 # Table name: images
 #
-#  id          :integer          not null, primary key
-#  caption     :text
-#  file        :string(255)
-#  projects_id :integer
+#  id         :integer          not null, primary key
+#  caption    :text
+#  file       :string(255)
+#  project_id :integer
 #
 
 class Image < ActiveRecord::Base
