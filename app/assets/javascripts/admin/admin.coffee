@@ -1,2 +1,4 @@
-@app = angular.module 'edenlew-admin',
-  ['templates']
+@admin = angular.module 'edenlew-admin',
+  ['templates',
+    'ngResource',
+    'ngRoute']
