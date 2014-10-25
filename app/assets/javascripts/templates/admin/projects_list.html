@@ -1,4 +1,4 @@
-<a class="btn">New Project</a>
+<a class="btn" ng-click="newProject()">New Project</a>
 <table>
     <thead>
         <tr>
@@ -13,7 +13,7 @@
     <tbody>
         <tr ng-class="{invisible: !project.visible}"
             ng-repeat="project in projects">
-            <td>{{project.name}}</td>
+            <td ng-click="editProject(project)">{{project.name}}</td>
             <td>{{project.categories}}</td>
             <td>{{project.start_date}}</td>
             <td>{{project.finish_date}}</td>
