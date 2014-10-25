@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       resources :projects, only: [:index, :show]
 
       namespace :admin do
-        resources :projects
+        resources :projects, except: [:new, :edit]
       end
     end
   end

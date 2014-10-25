@@ -1,4 +1,4 @@
 app.directive 'header',
   () ->
     restrict: 'E'
-    templateUrl: "directives/header.html"
+    templateUrl: "app/directives/header.html"
