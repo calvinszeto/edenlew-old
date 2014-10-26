@@ -1,1 +1,24 @@
 <a class="btn" ng-click="viewProjects()">Back to List</a>
+<a class="btn" ng-click="saveProject()">Save Changes</a>
+
+<div class="project-form">
+    <input type="text" ng-model="project.name"
+           placeholder="Name">
+    <input type="date" ng-model="project.start_date"
+           placeholder="Start Date">
+    <input type="date" ng-model="project.finish_date"
+           placeholder="Finish Date">
+
+    Categories
+    <div>
+        <div ng-repeat="category in project.categories"></div>
+    </div>
+
+    Images
+    <div>
+
+    </div>
+
+    <textarea ng-model="project.content">
+    </textarea>
+</div>
