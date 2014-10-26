@@ -16,4 +16,5 @@
 //= require angular-route
 //= require angular-resource
 //= require angular-rails-templates
+//= require danialfarid-angular-file-upload/dist/angular-file-upload
 //= require_tree .

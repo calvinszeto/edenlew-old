@@ -1,4 +1,4 @@
-class Api::V1::Admin::ProjectsController < ApiController
+class Api::V1::Admin::ProjectsController < AdminController
   layout false
   before_filter :get_project, only: [:show, :update, :destroy]
 

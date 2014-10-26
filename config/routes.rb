@@ -8,7 +8,10 @@ Rails.application.routes.draw do
       resources :projects, only: [:index, :show]
 
       namespace :admin do
-        resources :projects, except: [:new, :edit]
+        resources :projects, except: [:new, :edit] do
+          resource :images, only: [:index, :create, :update, :destroy]
+          patch 'images/upload/:id', to: 'images#upload', as: 'images_upload'
+        end
       end
     end
   end
