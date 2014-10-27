@@ -2,5 +2,59 @@
   div.project-form {
     margin-top: 1.414em;
     display: flex;
+    flex-direction: column;
+
+    div.project-properties {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      div {
+        margin-bottom: 1.414em;
+      }
+
+      div.project-details {
+        flex-grow: 2;
+        div {
+          display: flex;
+          align-items: center;
+
+          a.btn {
+            margin-left: 0.5em;
+          }
+
+          label {
+            display: flex;
+            align-items: center;
+            margin-right: 1.414em;
+
+            input {
+              height: 1.414em;
+              margin-left: 0.5em;
+            }
+
+            img.datepicker {
+              height: 1.414em;
+              margin-left: 0.354em;
+            }
+          }
+        }
+      }
+      div.project-categories {
+        flex-grow: 1;
+      }
+    }
+
+    div.project-content {
+      display: flex;
+      flex-flow: row-reverse wrap;
+      justify-content: space-between;
+      div.project-images {
+        flex-grow: 1;
+      }
+      label {
+        flex-grow: 2;
+      }
+    }
   }
 }

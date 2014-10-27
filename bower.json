@@ -10,7 +10,9 @@
         "angular": "latest",
         "angular-route": "latest",
         "angular-resource": "latest",
-        "danialfarid-angular-file-upload": "latest"
+        "danialfarid-angular-file-upload": "latest",
+        "jquery-ui": "latest",
+        "angular-ui-date": "latest"
     }
   }
 }

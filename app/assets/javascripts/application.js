@@ -12,9 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require angular
 //= require angular-route
 //= require angular-resource
 //= require angular-rails-templates
 //= require danialfarid-angular-file-upload/dist/angular-file-upload
+//= require angular-ui-date/src/date
 //= require_tree .

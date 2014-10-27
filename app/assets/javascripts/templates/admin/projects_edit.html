@@ -3,22 +3,43 @@
 <a class="btn" ng-click="saveProject()">Save Changes</a>
 
 <div class="project-form">
-    <input type="text" ng-model="project.name"
-           placeholder="Name">
-    <input type="date" ng-model="project.start_date"
-           placeholder="Start Date">
-    <input type="date" ng-model="project.finish_date"
-           placeholder="Finish Date">
-
-    Categories
-    <div>
-        <div ng-repeat="category in project.categories"></div>
+    <div class="project-properties">
+        <div class="project-details">
+            <div>
+                <label>
+                    Name
+                    <input type="text" ng-model="project.name"
+                           placeholder="Name">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Start Date: {{project.start_date | date:'mediumDate' | blankToNone}}
+                    <img class="datepicker" src="assets/calendar.svg" ui-date>
+                </label>
+                <label>
+                    Finish Date: {{project.finish_date | date:'mediumDate' | blankToNone}}
+                    <img class="datepicker" src="assets/calendar.svg" ui-date>
+                </label>
+            </div>
+            <div>
+                This project is {{project.visible ? "visible" : "invisible"}}.
+                <a class="btn">Make it {{project.visible ? "invisible" : "visible"}}</a>
+            </div>
+        </div>
+        <div class="project-categories">
+            Categories
+            <div ng-repeat="category in project.categories"></div>
+        </div>
     </div>
-
-    Images
-    <div>
+    <div class="project-content">
+        <div class="project-images">
+            Images
+        </div>
+        <label>
+            Content
+            <textarea ng-model="project.content">
+            </textarea>
+        </label>
     </div>
-
-    <textarea ng-model="project.content">
-    </textarea>
 </div>
