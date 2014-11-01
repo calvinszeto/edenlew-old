@@ -11,7 +11,8 @@
         "angular-route": "latest",
         "angular-resource": "latest",
         "danialfarid-angular-file-upload": "latest",
-        "jquery-ui": "latest"
+        "zebra-datepicker": "latest",
+        "angular-mocks": "latest"
     }
   }
 }
