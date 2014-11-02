@@ -5,5 +5,11 @@ admin.directive 'zebraDatepicker',
     transclude: true
     require: 'ngModel'
     link: (scope, element, attrs, ngModel) ->
-      scope.hello = "goodbye"
+      element.find('input.zebra-datepicker-input').Zebra_DatePicker(
+        onSelect: (formattedDate, standardDate, jsDate, dateElement) ->
+          ngModel.$setViewValue(jsDate)
+      )
+      element.find('img.zebra-datepicker-icon').on('click',
+        ->
+          element.find('input.zebra-datepicker-input button').click())
 ]

@@ -1,3 +1,4 @@
+beforeEach(module('edenlew'))
 beforeEach(module('edenlew-admin'))
 
 beforeEach inject (_$httpBackend_, $rootScope, $controller, $location, $injector, $routeParams, $q, $window,

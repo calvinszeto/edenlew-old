@@ -15,11 +15,11 @@
             <div>
                 <label >
                     Start Date: {{project.start_date | date:'mediumDate' | blankToNone}}
-                    <img ng-click="selectStartDate()" src="assets/calendar.svg">
+                    <zebra-datepicker ng-model="project.start_date"></zebra-datepicker>
                 </label>
                 <label>
                     Finish Date: {{project.finish_date | date:'mediumDate' | blankToNone}}
-                    <img class="datepicker" src="assets/calendar.svg">
+                    <zebra-datepicker ng-model="project.finish_date"></zebra-datepicker>
                 </label>
             </div>
             <div>
