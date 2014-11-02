@@ -24,7 +24,7 @@
             </div>
             <div>
                 This project is {{project.visible ? "visible" : "invisible"}}.
-                <a class="btn">Make it {{project.visible ? "invisible" : "visible"}}</a>
+                <a class="btn" ng-click="toggleVisible()">Make it {{project.visible ? "invisible" : "visible"}}</a>
             </div>
         </div>
         <div class="project-categories">
