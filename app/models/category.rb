@@ -11,4 +11,8 @@ class Category < ActiveRecord::Base
   has_many :projects, through: :categorizations
 
   validates :name, uniqueness: true
+
+  def whitelisted_attributes
+    [:name]
+  end
 end

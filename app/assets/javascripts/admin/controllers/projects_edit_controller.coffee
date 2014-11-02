@@ -1,6 +1,6 @@
 admin.controller 'ProjectsEditCtrl',
-  ['$scope', '$routeParams', 'Projects', '$location', 'Images'
-    ($scope, $routeParams, Projects, $location, Images) ->
+  ['$scope', '$routeParams', 'Projects', '$location', 'Images', 'Categories',
+    ($scope, $routeParams, Projects, $location, Images, Categories) ->
       projectId = $routeParams.projectId
       file = null
 
@@ -26,6 +26,11 @@ admin.controller 'ProjectsEditCtrl',
             $scope.project = project
             $scope.projectId = project.id
         )
+
       # Get Categories
+      Categories.all().then(
+        (categories) ->
+          $scope.categories = categories
+      )
       # Get Images
   ]
