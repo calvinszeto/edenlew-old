@@ -2,5 +2,4 @@
   ['templates',
     'ngResource',
     'ngRoute',
-    'angularFileUpload',
-    'ui.date']
+    'angularFileUpload']

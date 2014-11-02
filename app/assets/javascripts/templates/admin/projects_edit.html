@@ -13,13 +13,13 @@
                 </label>
             </div>
             <div>
-                <label>
+                <label >
                     Start Date: {{project.start_date | date:'mediumDate' | blankToNone}}
-                    <img class="datepicker" src="assets/calendar.svg" ui-date>
+                    <img ng-click="selectStartDate()" src="assets/calendar.svg">
                 </label>
                 <label>
                     Finish Date: {{project.finish_date | date:'mediumDate' | blankToNone}}
-                    <img class="datepicker" src="assets/calendar.svg" ui-date>
+                    <img class="datepicker" src="assets/calendar.svg">
                 </label>
             </div>
             <div>

@@ -33,10 +33,14 @@
               margin-left: 0.5em;
             }
 
-            img.datepicker {
+            img {
               height: 1.414em;
               margin-left: 0.354em;
             }
+          }
+
+          input.datepicker {
+            display: none;
           }
         }
       }

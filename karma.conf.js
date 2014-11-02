@@ -22,7 +22,7 @@ module.exports = function(config) {
       'vendor/assets/bower_components/zebra-datepicker/javascript/zebra_datepicker.js',
       'vendor/assets/bower_components/angular-mocks/angular-mocks.js',
       'app/assets/javascripts/**/*.coffee',
-      'app/assets/javascripts/**/*.html',
+      'app/assets/javascripts/templates/**/*.html',
       'spec/javascripts/spec_helper.coffee',
       'spec/javascripts/**/*.coffee'
     ],
@@ -37,12 +37,12 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       'app/assets/javascripts/**/*.coffee': ['coffee'],
-      '**/*.html': ['ng-html2js'],
+      'app/assets/javascripts/templates/**/*.html': ['ng-html2js'],
       'spec/javascripts/**/*.coffee': ['coffee']
     },
 
     ngHtml2JsPreprocessor: {
-      stripPrefix: 'app/assets/javascripts/templates',
+      stripPrefix: 'app/assets/javascripts/templates/',
       moduleName: 'templates'
     },
 

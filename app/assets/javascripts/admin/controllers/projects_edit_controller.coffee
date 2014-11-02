@@ -10,6 +10,9 @@ admin.controller 'ProjectsEditCtrl',
       $scope.uploadImage = ($files) ->
         file = $files[0]
 
+      $scope.selectStartDate = ->
+        angular.element('#start-date-picker').click()
+
       $scope.project = {}
       if projectId?
         Projects.find(projectId).then(
