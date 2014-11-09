@@ -29,7 +29,13 @@
         </div>
         <div class="project-categories">
             Categories
-            <div ng-repeat="category in project.categories"></div>
+            <label ng-repeat="category in categories">
+                <input type="checkbox" ng-checked="hasCategory(category)">
+                {{category}}
+            </label>
+            <div class="add-category">
+                <input type="text" ng-model="newCategory"><a class="btn" ng-click="addCategory()">Add Category</a>
+            </div>
         </div>
     </div>
     <div class="project-content">

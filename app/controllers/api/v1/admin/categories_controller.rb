@@ -6,15 +6,14 @@ class Api::V1::Admin::CategoriesController < AdminController
   end
 
   def create
-    Category.create(category_params)
-    @categories = Category.all
-    render :index
+    @category = Category.create(category_params)
+    render :show
   end
 
   def destroy
     Category.find(params[:id]).destroy
     @categories = Category.all
-    render :index
+    render nothing: true
   end
 
   private

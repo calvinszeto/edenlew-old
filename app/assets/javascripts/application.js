@@ -18,4 +18,5 @@
 //= require angular-rails-templates
 //= require danialfarid-angular-file-upload/dist/angular-file-upload
 //= require zebra-datepicker/public/javascript/zebra_datepicker
+//= require underscore
 //= require_tree .

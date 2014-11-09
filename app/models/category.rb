@@ -12,7 +12,7 @@ class Category < ActiveRecord::Base
 
   validates :name, uniqueness: true
 
-  def whitelisted_attributes
+  def self.whitelisted_attributes
     [:name]
   end
 end

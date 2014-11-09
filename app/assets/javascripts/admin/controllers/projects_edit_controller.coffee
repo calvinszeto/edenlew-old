@@ -13,6 +13,12 @@ admin.controller 'ProjectsEditCtrl',
       $scope.toggleVisible = ->
         $scope.project.visible = !$scope.project.visible
 
+      $scope.hasCategory = (category) ->
+        _.contains($scope.categories, category)
+
+      $scope.addCategory = ->
+        Categories.create({name: $scope.newCategory})
+
       # Get Project
       $scope.project = {}
       if projectId?
@@ -28,6 +34,8 @@ admin.controller 'ProjectsEditCtrl',
         )
 
       # Get Categories
+      $scope.newCategory = ""
+      $scope.categories = []
       Categories.all().then(
         (categories) ->
           $scope.categories = categories

@@ -12,7 +12,8 @@
         "angular-resource": "latest",
         "danialfarid-angular-file-upload": "latest",
         "zebra-datepicker": "latest",
-        "angular-mocks": "latest"
+        "angular-mocks": "latest",
+        "underscore": "latest"
     }
   }
 }

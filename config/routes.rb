@@ -12,7 +12,7 @@ Rails.application.routes.draw do
           resource :images, only: [:index, :create, :update, :destroy]
           patch 'images/upload/:id', to: 'images#upload', as: 'images_upload'
         end
-        resources :categories, only: [:index]
+        resources :categories, only: [:index, :create, :destroy]
       end
     end
   end

@@ -9,9 +9,9 @@ admin.factory 'Categories',
     {
       all: ->
         resource.query().$promise
-      create: (categoryId) ->
+      create: (category) ->
         resource.save(
-          categoryId: categoryId
+          category: category
         ).$promise
       destroy: (categoryId) ->
         resource.delete(

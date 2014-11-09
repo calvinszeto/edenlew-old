@@ -13,7 +13,7 @@ class Image < ActiveRecord::Base
 
 	belongs_to :project
 
-  def whitelisted_attributes
+  def self.whitelisted_attributes
     [:caption]
   end
 end
