@@ -43,6 +43,10 @@
       div.project-categories {
         flex-grow: 1;
         max-width: 20vw;
+        label {
+          display: flex;
+          align-items: center;
+        }
         .add-category {
           display: flex;
           align-items: center;

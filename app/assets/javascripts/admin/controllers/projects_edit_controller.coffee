@@ -14,10 +14,13 @@ admin.controller 'ProjectsEditCtrl',
         $scope.project.visible = !$scope.project.visible
 
       $scope.hasCategory = (category) ->
-        _.contains($scope.categories, category)
+        _.contains($scope.project.categories, category)
 
       $scope.addCategory = ->
-        Categories.create({name: $scope.newCategory})
+        Categories.create({name: $scope.newCategory}).then(
+          (category) ->
+            $scope.categories.push(category.name)
+        )
 
       # Get Project
       $scope.project = {}
