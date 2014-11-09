@@ -16,6 +16,7 @@ class Api::V1::Admin::ProjectsController < AdminController
 
   def update
     @project.update project_params
+    @project.update_categories category_params
     render :show
   end
 
@@ -31,5 +32,10 @@ class Api::V1::Admin::ProjectsController < AdminController
 
   def project_params
     params.require(:project).permit(Project.whitelisted_attributes)
+  end
+
+  def category_params
+    params[:project][:categories] = [] if params[:project][:categories].nil?
+    params[:project].require(:categories)
   end
 end

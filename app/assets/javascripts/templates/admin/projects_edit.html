@@ -32,7 +32,7 @@
         <div class="project-categories">
             Categories
             <label ng-repeat="category in categories">
-                <input type="checkbox" ng-checked="hasCategory(category)">
+                <input type="checkbox" ng-checked="hasCategory(category)" ng-click="updateCategory(category)">
                 {{category}}
             </label>
             <div class="add-category">

@@ -35,6 +35,12 @@ admin.controller 'ProjectsEditCtrl',
       $scope.hasCategory = (category) ->
         _.contains($scope.project.categories, category)
 
+      $scope.updateCategory = (category) ->
+        if _.contains($scope.project.categories, category)
+          $scope.project.categories = _.without($scope.project.categories, category)
+        else
+          $scope.project.categories.push(category)
+
       $scope.addCategory = ->
         Categories.create({name: $scope.newCategory}).then(
           (category) ->

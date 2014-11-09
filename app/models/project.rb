@@ -17,6 +17,10 @@ class Project < ActiveRecord::Base
   has_many :categorizations
   has_many :categories, through: :categorizations
 
+  def update_categories(category_names)
+    update_attribute :category_ids, category_names.map{|name| Category.find_by(name: name).id}
+  end
+
   def self.whitelisted_attributes
     [:name, :start_date, :finish_date, :content, :visible]
   end
