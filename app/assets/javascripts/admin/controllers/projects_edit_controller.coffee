@@ -7,6 +7,25 @@ admin.controller 'ProjectsEditCtrl',
       $scope.viewProjects = ->
         $location.path('/projects')
 
+      $scope.destroyProject = ->
+        Projects.destroy(projectId).then(
+          ->
+            $scope.viewProjects()
+          , ->
+            angular.element('.message').addClass('error-message')
+            $scope.message = "Project could not be deleted."
+        )
+
+      $scope.saveProject = ->
+        Projects.update(projectId, $scope.project).then(
+          (project) ->
+            angular.element('.message').addClass('success-message')
+            $scope.message = "Project saved successfully."
+          , (project) ->
+            angular.element('.message').addClass('error-message')
+            $scope.message = "Project could not be saved."
+        )
+
       $scope.uploadImage = ($files) ->
         file = $files[0]
 
@@ -30,10 +49,11 @@ admin.controller 'ProjectsEditCtrl',
             $scope.project = project
           )
       else
-        Projects.create({}).then(
+        Projects.create(project: {}).then(
           (project) ->
             $scope.project = project
             $scope.projectId = project.id
+            projectId = project.id
         )
 
       # Get Categories

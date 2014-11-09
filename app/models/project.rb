@@ -16,4 +16,8 @@ class Project < ActiveRecord::Base
 	has_many :images
   has_many :categorizations
   has_many :categories, through: :categorizations
+
+  def self.whitelisted_attributes
+    [:name, :start_date, :finish_date, :content, :visible]
+  end
 end

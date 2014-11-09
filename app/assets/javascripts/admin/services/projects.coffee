@@ -6,7 +6,7 @@ admin.factory 'Projects',
         id: '@id'
       },
       {
-        update: 'PATCH'
+        update: {method: 'PATCH'}
       }
     )
 
