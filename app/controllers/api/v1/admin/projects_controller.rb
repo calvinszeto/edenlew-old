@@ -35,7 +35,6 @@ class Api::V1::Admin::ProjectsController < AdminController
   end
 
   def category_params
-    params[:project][:categories] = [] if params[:project][:categories].nil?
-    params[:project].require(:categories)
+    params[:project][:categories].nil? ? [] : params[:project][:categories]
   end
 end
