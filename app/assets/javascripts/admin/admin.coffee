@@ -2,7 +2,8 @@
   ['templates',
     'ngResource',
     'ngRoute',
-    'angularFileUpload']
+    'angularFileUpload',
+    'textAngular']
 
 @admin.config([
   '$httpProvider',

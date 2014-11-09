@@ -13,7 +13,8 @@
         "danialfarid-angular-file-upload": "latest",
         "zebra-datepicker": "latest",
         "angular-mocks": "latest",
-        "underscore": "latest"
+        "underscore": "latest",
+        "textAngular": "git@github.com:fraywing/textAngular.git#master"
     }
   }
 }
