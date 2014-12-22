@@ -24,6 +24,7 @@ gem 'annotate'
 
 # For uploading files
 gem 'carrierwave'
+gem 'fog'
 
 # For loading angular templates
 gem 'angular-rails-templates'
