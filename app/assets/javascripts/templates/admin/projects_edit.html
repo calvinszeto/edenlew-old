@@ -42,12 +42,22 @@
     </div>
     <div class="project-images">
         Images
+        <br>
+        <!-- Display uploaded images for this project -->
+        <div ng-repeat="image in project.images">
+            <p>{{image.name}}</p>
+            <p>{{image.url}}</p>
+            <p>{{image.caption}}</p>
+            <p>{{image.tag}}</p>
+        </div>
+        <!-- Button to upload new image -->
+        <a class="btn">Upload new Image</a>
     </div>
     <div class="project-content">
         <label class="project-content-box">
             Content
-            <div text-angular ng-model="project.content">
-            </div>
+            <br>
+            <textarea></textarea>
         </label>
     </div>
 </div>
