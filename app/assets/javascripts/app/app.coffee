@@ -1,2 +1,4 @@
 @app = angular.module 'edenlew',
-    ['templates']
+    ['templates',
+     'ngRoute',
+     'ngResource']

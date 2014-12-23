@@ -26,7 +26,7 @@ class Project < ActiveRecord::Base
   end
 
   def primary_image
-    images.find_by(primary: true)
+    images.find_by(primary_icon: true)
   end
 
   def self.whitelisted_attributes
