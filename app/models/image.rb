@@ -13,6 +13,10 @@ class Image < ActiveRecord::Base
 
 	belongs_to :project
 
+  def icon_url
+    file.icon.url
+  end
+
   def self.whitelisted_attributes
     [:caption]
   end

@@ -21,6 +21,14 @@ class Project < ActiveRecord::Base
     update_attribute :category_ids, category_names.map{|name| Category.find_by(name: name).id}
   end
 
+  def icon_url
+    primary_image.icon_url
+  end
+
+  def primary_image
+    images.find_by(primary: true)
+  end
+
   def self.whitelisted_attributes
     [:name, :start_date, :finish_date, :content, :visible]
   end
