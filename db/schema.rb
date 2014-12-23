@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141025194447) do
+ActiveRecord::Schema.define(version: 20141223185907) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20141025194447) do
     t.text    "caption"
     t.string  "file"
     t.integer "project_id"
+    t.boolean "primary_icon"
+    t.integer "position"
   end
 
   create_table "projects", force: true do |t|

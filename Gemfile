@@ -24,6 +24,7 @@ gem 'annotate'
 
 # For uploading files
 gem 'carrierwave'
+gem 'mini_magick'
 gem 'fog'
 
 # For loading angular templates

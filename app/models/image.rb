@@ -2,10 +2,12 @@
 #
 # Table name: images
 #
-#  id         :integer          not null, primary key
-#  caption    :text
-#  file       :string(255)
-#  project_id :integer
+#  id           :integer          not null, primary key
+#  caption      :text
+#  file         :string(255)
+#  project_id   :integer
+#  primary_icon :boolean
+#  position     :integer
 #
 
 class Image < ActiveRecord::Base
@@ -18,6 +20,6 @@ class Image < ActiveRecord::Base
   end
 
   def self.whitelisted_attributes
-    [:caption]
+    [:caption, :primary_icon, :position]
   end
 end
