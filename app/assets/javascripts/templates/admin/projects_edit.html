@@ -53,6 +53,8 @@
                 Caption
                 <br>
                 <textarea ng-model="image.caption"></textarea>
+                <br>
+                <input type="checkbox" ng-model="image.primary_icon" ng-click="setPrimary(image)"> Primary Icon
                 <p>{{image.tag}}</p>
                 <a class="btn" ng-click="saveImage(image)">Save Changes</a>
                 <a class="btn" ng-click="deleteImage(image)">Delete Image</a>

@@ -1,7 +1,7 @@
 class Api::V1::Admin::ImagesController < AdminController
   layout false
   before_filter :get_project, only: [:create]
-  before_filter :get_image, only: [:update, :upload, :destroy]
+  before_filter :get_image, only: [:update, :destroy]
 
   def create
     @image = Image.create(file_params)
@@ -11,10 +11,7 @@ class Api::V1::Admin::ImagesController < AdminController
 
   def update
     @image.update(image_params)
-  end
-
-  def upload
-    @image.update(file_params)
+    render 'show'
   end
 
   def destroy

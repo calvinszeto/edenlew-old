@@ -6,7 +6,8 @@ admin.factory 'Images',
         id: '@id'
       },
       {
-        update: 'PATCH'
+        update:
+          method: 'PATCH'
       }
     )
 

@@ -41,6 +41,12 @@ admin.controller 'ProjectsEditCtrl',
             $scope.project.images = _.reject($scope.project.images, (img) -> img == image)
         )
 
+      $scope.setPrimary = (image) ->
+        # If any other images are primary, set them to false
+        # This doesn't affect the database - the backend will do the same thing separately
+        for img in _.filter($scope.project.images, (img )-> img != image && image.primary_icon)
+          img.primary_icon = false
+
       $scope.toggleVisible = ->
         $scope.project.visible = !$scope.project.visible
 
