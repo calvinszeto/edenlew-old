@@ -1,8 +1,8 @@
 admin.factory 'Images',
   ['$resource', '$upload', ($resource, $upload) ->
-    resource = $resource('/api/v1/projects/:project_id/images/:id',
+    resource = $resource('/api/v1/admin/projects/:projectId/images/:id',
       {
-        project_id: '@projectId'
+        projectId: '@projectId'
         id: '@id'
       },
       {
@@ -11,25 +11,22 @@ admin.factory 'Images',
     )
 
     {
-      create: (projectId) ->
-        resource.save(
-          projectId: projectId
-        ).$promise
-      update: (projectId, imageId, image) ->
+      update: (projectId, image) ->
         resource.update(
-          projectId: projectId,
-          id: imageId,
+          projectId: projectId
+          id: image.id
           image: image
         ).$promise
-      upload: (projectId, imageId, file) ->
+      upload: (projectId, file) ->
         $upload.upload({
-          url: "/api/v1/projects/#{projectId}/images/upload/#{imageId}"
+          url: "/api/v1/admin/projects/#{projectId}/images"
+          method: 'POST'
           file: file
         })
-      destroy: (projectId, imageId) ->
+      destroy: (projectId, image) ->
         resource.delete(
-          projectId: projectId,
-          id: imageId,
+          projectId: projectId
+          id: image.id
         ).$promise
     }
   ]

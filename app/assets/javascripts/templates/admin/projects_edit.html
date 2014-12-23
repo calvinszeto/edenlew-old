@@ -44,20 +44,32 @@
         Images
         <br>
         <!-- Display uploaded images for this project -->
-        <div ng-repeat="image in project.images">
-            <p>{{image.name}}</p>
-            <p>{{image.url}}</p>
-            <p>{{image.caption}}</p>
-            <p>{{image.tag}}</p>
+        <div class="project-image" ng-repeat="image in project.images">
+            <div>
+                <img ng-src="{{image.url}}">
+                <p>{{image.name}}</p>
+            </div>
+            <div>
+                Caption
+                <br>
+                <textarea ng-model="image.caption"></textarea>
+                <p>{{image.tag}}</p>
+                <a class="btn" ng-click="saveImage(image)">Save Changes</a>
+                <a class="btn" ng-click="deleteImage(image)">Delete Image</a>
+            </div>
         </div>
         <!-- Button to upload new image -->
-        <a class="btn">Upload new Image</a>
+        <button class="btn"
+           type="file"
+           ng-file-select="uploadImages($files)"
+           ng-multiple="true"
+           resetOnClick="true">Upload new Image</button>
     </div>
     <div class="project-content">
         <label class="project-content-box">
             Content
             <br>
-            <textarea></textarea>
+            <textarea ng-model="project.content"></textarea>
         </label>
     </div>
 </div>

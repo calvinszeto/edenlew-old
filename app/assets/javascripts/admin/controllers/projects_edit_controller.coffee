@@ -1,8 +1,7 @@
 admin.controller 'ProjectsEditCtrl',
-  ['$scope', '$routeParams', 'Projects', '$location', 'Images', 'Categories',
-    ($scope, $routeParams, Projects, $location, Images, Categories) ->
+  ['$scope', '$routeParams', 'Projects', '$location', 'Images', 'Categories', '$upload'
+    ($scope, $routeParams, Projects, $location, Images, Categories, $upload) ->
       projectId = $routeParams.projectId
-      file = null
 
       $scope.viewProjects = ->
         $location.path('/projects')
@@ -26,8 +25,21 @@ admin.controller 'ProjectsEditCtrl',
             $scope.message = "Project could not be saved."
         )
 
-      $scope.uploadImage = ($files) ->
-        file = $files[0]
+      $scope.uploadImages = ($files) ->
+        for file in $files
+          Images.upload(projectId, file).success(
+            (image) ->
+              $scope.project.images.push(image)
+          )
+
+      $scope.saveImage = (image) ->
+        Images.update(projectId, image)
+
+      $scope.deleteImage = (image) ->
+        Images.destroy(projectId, image).then(
+          ->
+            $scope.project.images = _.reject($scope.project.images, (img) -> img == image)
+        )
 
       $scope.toggleVisible = ->
         $scope.project.visible = !$scope.project.visible
@@ -69,5 +81,4 @@ admin.controller 'ProjectsEditCtrl',
         (categories) ->
           $scope.categories = categories
       )
-      # Get Images
   ]

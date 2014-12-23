@@ -9,8 +9,7 @@ Rails.application.routes.draw do
 
       namespace :admin do
         resources :projects, except: [:new, :edit] do
-          resource :images, only: [:index, :create, :update, :destroy]
-          patch 'images/upload/:id', to: 'images#upload', as: 'images_upload'
+          resources :images, only: [:create, :update, :upload, :destroy]
         end
         resources :categories, only: [:index, :create, :destroy]
       end

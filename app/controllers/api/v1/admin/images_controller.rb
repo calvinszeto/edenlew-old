@@ -4,8 +4,9 @@ class Api::V1::Admin::ImagesController < AdminController
   before_filter :get_image, only: [:update, :upload, :destroy]
 
   def create
-    @image = Image.create(image_params)
+    @image = Image.create(file_params)
     @image.update_attribute :project, @project
+    render 'show'
   end
 
   def update
@@ -18,6 +19,7 @@ class Api::V1::Admin::ImagesController < AdminController
 
   def destroy
     @image.destroy
+    render nothing: true
   end
 
   private
@@ -26,7 +28,7 @@ class Api::V1::Admin::ImagesController < AdminController
   end
 
   def file_params
-    params.require(:file)
+    params.permit(:file)
   end
 
   def get_project

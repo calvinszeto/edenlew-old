@@ -3,7 +3,7 @@
     'ngResource',
     'ngRoute',
     'angularFileUpload',
-    'textAngular']
+    ]
 
 @admin.config([
   '$httpProvider',
