@@ -1,7 +1,7 @@
 <!-- Category buttons which filter the list of projects -->
-<button ng-repeat="category in categories"
-        ng-click="setCategory(category)"
-        ng-class="{selected: isSelected(category)}">{{category}}</button>
+<a class="btn" ng-repeat="category in categories"
+               ng-click="setCategory(category)"
+               ng-class="{selected: isSelected(category)}">{{category}}</a>
 <!-- Project icons -->
 <div ng-repeat="project in projects|filter:{categories: selectedCategories}:categoryComparator">
     <img ng-src="{{project.icon_url}}">
