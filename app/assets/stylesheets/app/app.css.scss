@@ -1,6 +1,20 @@
 #app {
-  a.btn {
+  .btn {
     background-color: #d1d2c0;
     cursor: pointer;
+    height: 33px;
+    line-height: 33px;
+    font-family: sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: 5px;
   }
+
+  span + span {
+    margin-left: 20px;
+  }
+
+  margin-top: 30px;
 }

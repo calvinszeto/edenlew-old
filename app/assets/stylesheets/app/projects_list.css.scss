@@ -1,0 +1,23 @@
+.project-icons {
+  margin-top: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  div {
+    height: 190px;
+    width: 220px;
+    img {
+      // Center image in div
+      display: block;
+      margin: 0 auto;
+      // On hover
+      // Link properties
+    }
+  }
+
+  div + div {
+    margin-left: 20px;
+  }
+}

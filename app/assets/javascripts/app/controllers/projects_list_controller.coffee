@@ -5,7 +5,7 @@ app.controller 'ProjectsListCtrl',
     $scope.categories = []
 
     collectCategories = (projects) ->
-      $scope.categories = _.pluck(_.flatten(_.pluck(projects, 'categories')), 'name')
+      $scope.categories = _.uniq(_.pluck(_.flatten(_.pluck(projects, 'categories')), 'name'))
 
     $scope.isSelected = (category) ->
       category in $scope.selectedCategories
