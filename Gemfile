@@ -30,6 +30,11 @@ gem 'fog'
 # For loading angular templates
 gem 'angular-rails-templates'
 
+# For Heroku
+group :production do
+	gem 'rails_12factor'
+end
+
 group :development do
 	gem 'bower-rails'
 end
