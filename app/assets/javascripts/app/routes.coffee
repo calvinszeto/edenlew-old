@@ -1,4 +1,4 @@
-app.config ($routeProvider) ->
+app.config ['$routeProvider', ($routeProvider) ->
   $routeProvider
   .when('/',
     redirectTo: 'projects'
@@ -9,3 +9,4 @@ app.config ($routeProvider) ->
     templateUrl: 'app/projects_show.html'
     controller: 'ProjectsShowCtrl'
   )
+]

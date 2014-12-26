@@ -1,4 +1,4 @@
-admin.config ($routeProvider) ->
+admin.config ['$routeProvider', ($routeProvider) ->
   $routeProvider
     .when('/',
       redirectTo: 'projects'
@@ -12,3 +12,4 @@ admin.config ($routeProvider) ->
       templateUrl: 'admin/projects_edit.html'
       controller: 'ProjectsEditCtrl'
     )
+]
