@@ -1,19 +1,46 @@
 .project-icons {
-  margin-top: 40px;
+  margin: 40px 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
 
   div {
+    // All icons set to 220x190
     height: 190px;
     width: 220px;
+    cursor: pointer;
+
     img {
       // Center image in div
       display: block;
       margin: 0 auto;
-      // On hover
-      // Link properties
+    }
+
+    .project-overlay {
+      display: none;
+    }
+    &:hover {
+      position: relative;
+      .project-overlay {
+        // Overlay text on image
+        position: absolute;
+        display: initial;
+        width: 100%;
+        color: white;
+        text-size: 15px;
+        text-transform: uppercase;
+        background-color: rgba(0,0,0,0.3);
+        // Center horizontally and vertically
+        text-align: center;
+        line-height: 190px;
+        margin: 0;
+        top: 0;
+      }
+
+      img {
+        opacity: 0.7;
+      }
     }
   }
 

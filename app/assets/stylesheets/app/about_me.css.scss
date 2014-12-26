@@ -1,0 +1,27 @@
+about-me {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+#about-me {
+  margin: 40px 0;
+  border-top: 1px solid black;
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  img {
+    width: 300px;
+  }
+
+  img + p {
+    margin-left: 20px;
+  }
+}
+
+#contact {
+  margin: 40px 0;
+  border-top: 1px solid black;
+}
