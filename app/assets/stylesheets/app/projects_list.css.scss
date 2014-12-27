@@ -1,5 +1,5 @@
 .project-icons {
-  margin: 40px 0;
+  margin: 2*$gutter-width 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -7,8 +7,8 @@
 
   div {
     // All icons set to 220x190
-    height: 190px;
-    width: 220px;
+    height: $icon-width;
+    width: $icon-height;
     cursor: pointer;
 
     img {
@@ -28,12 +28,12 @@
         display: initial;
         width: 100%;
         color: white;
-        font-size: 15px;
+        font-size: $icon-font-size;
         text-transform: uppercase;
         background-color: rgba(0,0,0,0.3);
         // Center horizontally and vertically
         text-align: center;
-        line-height: 190px;
+        line-height: $icon-height;
         margin: 0;
         top: 0;
       }
@@ -45,6 +45,6 @@
   }
 
   div + div {
-    margin-left: 20px;
+    margin-left: $gutter-width;
   }
 }

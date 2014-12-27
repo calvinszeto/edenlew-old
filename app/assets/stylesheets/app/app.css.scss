@@ -1,25 +1,26 @@
 #app {
-  font-family:'Avenir LT W01_45 Book', sans-serif;
-  font-size: 10px;
-
   .btn {
-    background-color: #d1d2c0;
+    background-color: $app-button-color;
     cursor: pointer;
-    height: 33px;
-    line-height: 33px;
+    height: $app-button-height;
+    line-height: $app-button-height;
     text-transform: uppercase;
     display: inline-block;
-    padding: 0 10px;
-    border-radius: 5px;
+    padding: 0 0.5*$gutter-width;
+    border-radius: $app-button-border-radius;
 
     &.selected {
-      background-color: #b4b2b2;
+      background-color: $app-button-hover-color;
     }
   }
 
   span + span {
-    margin-left: 20px;
+    margin-left: $gutter-width;
   }
 
-  margin-top: 30px;
+  margin-top: 0.5*$column-width;
+
+  h1 {
+    font-size: $h1-font-size;
+  }
 }
