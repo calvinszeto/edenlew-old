@@ -5,7 +5,9 @@
 <!-- Project icons -->
 <div class="project-icons">
     <div ng-repeat="project in projects|filter:{categories: selectedCategories}:categoryComparator">
-        <img ng-src="{{project.icon_url}}">
-        <p class="project-overlay">{{project.name}}</p>
+        <a ng-click="showProject(project)">
+            <img ng-src="{{project.icon_url}}">
+            <p class="project-overlay">{{project.name}}</p>
+        </a>
     </div>
 </div>

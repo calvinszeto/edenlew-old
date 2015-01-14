@@ -19,6 +19,9 @@ app.controller 'ProjectsListCtrl',
     $scope.categoryComparator = (projectCategories, selectedCategories) ->
       _.every(selectedCategories, (category) -> category in _.pluck(projectCategories, 'name'))
 
+    $scope.showProject = (project) ->
+      $location.path("/projects/#{project.id}")
+
     Projects.all().then(
       (projects) ->
         $scope.projects = projects
