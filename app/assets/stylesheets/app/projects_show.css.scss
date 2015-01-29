@@ -37,3 +37,21 @@
     float: left;
   }
 }
+.project-show-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+
+  h1, h3 {
+    display: inline-block;
+    max-width: 49vw;
+    margin: 0;
+  }
+}
+
+.project-title {
+  display: flex;
+  flex-direction: column;
+}

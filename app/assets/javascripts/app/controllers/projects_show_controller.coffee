@@ -1,7 +1,10 @@
 app.controller 'ProjectsShowCtrl', [
-  '$scope', '$routeParams', 'Projects'
-  ($scope, $routeParams, Projects) ->
+  '$scope', '$routeParams', '$location', 'Projects',
+  ($scope, $routeParams, $location, Projects) ->
+    $scope.returnToIndex = ->
+      $location.path("/projects")
+
     Projects.find($routeParams.projectId).then(
-      (project) -> $scope.project = project; console.log(project)
+      (project) -> $scope.project = project
     )
 ]

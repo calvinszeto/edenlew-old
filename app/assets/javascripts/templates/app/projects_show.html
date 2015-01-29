@@ -1,8 +1,12 @@
-<h1>{{project.name}}</h1>
-<h3>{{project.finish_date}}</h3>
-<div class="project-nav-buttons">
-    <div class="arrow-left"></div>
-    <div class="boxes-wrapper"><div class="boxes"></div></div>
-    <div class="arrow-right"></div>
+<div class="project-show-header">
+    <div class="project-title">
+        <h1>{{project.name}}</h1>
+        <h3>{{project.finish_date}}</h3>
+    </div>
+    <div class="project-nav-buttons">
+        <div class="arrow-left"></div>
+        <div class="boxes-wrapper" ng-click="returnToIndex()"><div class="boxes"></div></div>
+        <div class="arrow-right"></div>
+    </div>
 </div>
 {{project.content}}
