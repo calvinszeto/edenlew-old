@@ -55,3 +55,33 @@
   display: flex;
   flex-direction: column;
 }
+
+.project-content {
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .align-start {
+    align-items: flex-start;
+  }
+
+  .align-end {
+    align-items: flex-end;
+  }
+
+  .align-center {
+    align-items: center;
+  }
+
+  .align-baseline{
+    align-items: baseline;
+  }
+}
