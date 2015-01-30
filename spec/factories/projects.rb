@@ -10,6 +10,7 @@
 #  visible     :boolean          default(FALSE)
 #  created_at  :datetime
 #  updated_at  :datetime
+#  location    :string(255)
 #
 
 FactoryGirl.define do

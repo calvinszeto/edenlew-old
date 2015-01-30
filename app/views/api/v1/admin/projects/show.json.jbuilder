@@ -1,4 +1,4 @@
-json.(@project, :id, :name, :start_date, :finish_date, :visible, :content)
+json.(@project, :id, :name, :start_date, :finish_date, :visible, :content, :location)
 json.categories @project.categories.map {|category| category[:name]}
 json.images @project.images do |image|
   json.id image.id

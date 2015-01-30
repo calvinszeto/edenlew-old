@@ -10,6 +10,7 @@
 #  visible     :boolean          default(FALSE)
 #  created_at  :datetime
 #  updated_at  :datetime
+#  location    :string(255)
 #
 
 class Project < ActiveRecord::Base
@@ -30,6 +31,6 @@ class Project < ActiveRecord::Base
   end
 
   def self.whitelisted_attributes
-    [:name, :start_date, :finish_date, :content, :visible]
+    [:name, :start_date, :finish_date, :content, :visible, :location]
   end
 end
