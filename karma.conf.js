@@ -21,6 +21,7 @@ module.exports = function(config) {
       'vendor/assets/bower_components/danialfarid-angular-file-upload/dist/angular-file-upload.js',
       'vendor/assets/bower_components/zebra-datepicker/javascript/zebra_datepicker.js',
       'vendor/assets/bower_components/angular-mocks/angular-mocks.js',
+      'vendor/assets/javascripts/jquery-1.11.2.min.js',
       'app/assets/javascripts/**/*.coffee',
       'app/assets/javascripts/templates/**/*.html',
       'spec/javascripts/spec_helper.coffee',
