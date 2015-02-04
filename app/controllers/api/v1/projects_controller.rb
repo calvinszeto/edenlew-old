@@ -2,7 +2,7 @@ class Api::V1::ProjectsController < ApiController
   layout false
 
   def index
-    @projects = Project.where(visible: true)
+    @projects = Project.where(visible: true).order(finish_date: :desc)
   end
 
   def show
