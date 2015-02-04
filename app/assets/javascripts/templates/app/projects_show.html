@@ -4,9 +4,7 @@
         <h3>{{project.finish_date | dateRange : project.start_date}}, {{project.location}}</h3>
     </div>
     <div class="project-nav-buttons">
-        <div class="arrow-left"></div>
         <div class="boxes-wrapper" ng-click="returnToIndex()"><div class="boxes"></div></div>
-        <div class="arrow-right"></div>
     </div>
 </div>
 <div class="project-content" ng-bind-html="projectContent">
