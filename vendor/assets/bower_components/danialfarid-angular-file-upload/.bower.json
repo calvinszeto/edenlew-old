@@ -9,6 +9,6 @@
     "commit": "658b8709b456680428ac19d8cd403ebc174f05d6"
   },
   "_source": "git://github.com/danialfarid/angular-file-upload.git",
-  "_target": "*",
+  "_target": "1.6.12",
   "_originalSource": "danialfarid-angular-file-upload"
 }

@@ -1,7 +1,7 @@
 {
   "name": "Zebra_Datepicker",
   "description": "A super-lightweight, highly configurable, cross-browser date picker jQuery plugin",
-  "version": "1.8.9",
+  "version": "1.8.8",
   "license": "LGPL",
   "main": "public/javascript/zebra_datepicker.js",
   "ignore": [
@@ -21,13 +21,13 @@
     "ui"
   ],
   "homepage": "https://github.com/stefangabos/Zebra_Datepicker",
-  "_release": "1.8.9",
+  "_release": "1.8.8",
   "_resolution": {
     "type": "version",
-    "tag": "1.8.9",
-    "commit": "c181ba4569c79b1303870961564fedca5b3e7c94"
+    "tag": "1.8.8",
+    "commit": "5b8bf21acef68580d14d9d20fa03d4b3c1b0a83e"
   },
   "_source": "git://github.com/stefangabos/Zebra_Datepicker.git",
-  "_target": "*",
+  "_target": "1.8.8",
   "_originalSource": "zebra-datepicker"
 }
