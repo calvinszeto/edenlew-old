@@ -1,13 +1,16 @@
-<!-- Category buttons which filter the list of projects -->
-<span class="btn" ng-repeat="category in categories"
-               ng-click="setCategory(category)"
-               ng-class="{selected: isSelected(category)}">{{category}}</span>
-<!-- Project icons -->
-<div class="project-icons">
-    <div ng-repeat="project in projects|filter:{categories: selectedCategories}:categoryComparator">
-        <a ng-click="showProject(project)">
-            <img ng-src="{{project.icon_url}}">
-            <p class="project-overlay">{{project.name}}</p>
-        </a>
+<div class="projects-list">
+    <!-- Category buttons which filter the list of projects -->
+    <span class="btn" ng-repeat="category in categories"
+                   ng-click="setCategory(category)"
+                   ng-class="{selected: isSelected(category)}">{{category}}</span>
+    <!-- Project icons -->
+    <div class="project-icons">
+        <div ng-repeat="project in projects|filter:{categories: selectedCategories}:categoryComparator">
+            <a ng-click="showProject(project)">
+                <img ng-src="{{project.icon_url}}">
+                <p class="project-overlay">{{project.name}}</p>
+            </a>
+        </div>
     </div>
+    <about-me></about-me>
 </div>

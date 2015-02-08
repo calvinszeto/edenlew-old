@@ -1,12 +1,17 @@
 app.controller 'ProjectsShowCtrl', [
-  '$scope', '$routeParams', '$location', 'Projects', '$sce',
-  ($scope, $routeParams, $location, Projects, $sce) ->
+  '$scope', '$routeParams', '$location', 'Projects', '$sce', '$animate'
+  ($scope, $routeParams, $location, Projects, $sce, $animate) ->
     $scope.returnToIndex = ->
-      $location.path("/projects")
+      $animate.addClass('#animation-overlay', 'fade-out').then( ->
+        $scope.$apply( ->
+          $location.path("/projects")
+        )
+      )
 
     Projects.find($routeParams.projectId).then(
       (project) ->
         $scope.project = project
         $scope.projectContent = $sce.trustAsHtml(project.content)
+        $animate.removeClass('#animation-overlay', 'fade-out')
     )
 ]
