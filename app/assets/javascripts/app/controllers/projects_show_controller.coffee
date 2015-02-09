@@ -8,10 +8,6 @@ app.controller 'ProjectsShowCtrl', [
         )
       )
 
-    $scope.$on('$viewContentLoaded', (event) ->
-      $window.ga('send', 'pageview', {page: $location.url()})
-    )
-
     Projects.find($routeParams.projectId).then(
       (project) ->
         $scope.project = project
