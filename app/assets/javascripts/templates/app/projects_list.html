@@ -5,7 +5,8 @@
                    ng-class="{selected: isSelected(category)}">{{category}}</span>
     <!-- Project icons -->
     <div class="project-icons">
-        <div ng-repeat="project in projects|filter:{categories: selectedCategories}:categoryComparator">
+        <div ng-repeat="project in projects|filter:{categories: selectedCategories}:categoryComparator"
+                class="project-repeat">
             <a ng-click="showProject(project)">
                 <img ng-src="{{project.icon_url}}">
                 <p class="project-overlay">{{project.name}}</p>

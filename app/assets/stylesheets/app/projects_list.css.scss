@@ -44,8 +44,18 @@
       }
     }
   }
+}
 
-  div + div {
-//    margin-left: $gutter-width;
-  }
+.project-repeat.ng-enter {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+}
+
+.project-repeat.ng-leave {
+  animation-name: fadeOut;
+  animation-duration: 0.2s;
+  -webkit-animation-name: fadeOut;
+  -webkit-animation-duration: 0.2s;
 }

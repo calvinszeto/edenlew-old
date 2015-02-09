@@ -16,6 +16,10 @@
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    
+    img {
+      cursor: pointer;
+    }
   }
 
   img + span {
