@@ -14,4 +14,8 @@ app.directive 'header',
                 $location.path("/projects")
               )
             )
+
+        $scope.moveToBottom = ->
+          $('html, body').scrollTop($(document).height())
+          return true
     ]

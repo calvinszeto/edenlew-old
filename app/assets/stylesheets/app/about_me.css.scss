@@ -9,6 +9,7 @@
 
   img {
     width: $bio-image-width;
+    flex-shrink: 0;
   }
 
   img + p {
