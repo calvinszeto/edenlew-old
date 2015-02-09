@@ -70,7 +70,7 @@
       width: 0;
     }
 
-    * + * {
+    & > * + * {
       margin-left: 15px;
     }
   }
@@ -83,6 +83,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    img + p {
+      margin-top: 4*$gutter-width;
+    }
   }
 
   .center {
@@ -103,5 +107,9 @@
 
   .align-baseline{
     align-items: baseline;
+  }
+
+  .inset-text {
+    padding: 0 0.5*$gutter-width;
   }
 }
