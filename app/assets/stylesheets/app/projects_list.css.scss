@@ -1,15 +1,19 @@
+.categories {
+  margin: 0 $margin-width;
+}
+
 .project-icons {
   margin: 2*$gutter-width 0 $gutter-width;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   div {
     // All icons set to 220x190
     height: $icon-width;
     width: $icon-height;
     cursor: pointer;
-    margin-bottom: $gutter-width;
+    margin: 0 $margin-width $gutter-width;
     font-weight: bold;
 
     img {

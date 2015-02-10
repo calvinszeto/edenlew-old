@@ -5,11 +5,12 @@
   padding-top: $column-width;
   padding-bottom: 2*$gutter-width;
 
-  .container {
+  .header {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
+    padding-left: $gutter-width;
   }
 
   .header-logo {

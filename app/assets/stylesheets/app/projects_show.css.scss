@@ -29,6 +29,10 @@
   box-shadow: 0 1em, 1em 0, 1em 1em, 0 0 0 4em inset;
 }
 
+.project-show {
+  padding-left: $gutter-width;
+}
+
 .project-nav-buttons {
   display: inline-block;
   cursor: pointer;
