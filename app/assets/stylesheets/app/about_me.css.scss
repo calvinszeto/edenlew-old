@@ -3,13 +3,17 @@
   border-top: 1px solid black;
   div {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: flex-end;
   }
 
   img {
     width: $bio-image-width;
     flex-shrink: 0;
+  }
+
+  p {
+    max-width: 620px;
   }
 
   img + p {

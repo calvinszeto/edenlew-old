@@ -1,5 +1,7 @@
 .categories {
-  margin: 0 $margin-width;
+  .btn {
+    margin: $margin-width $margin-width 0;
+  }
 }
 
 .project-icons {

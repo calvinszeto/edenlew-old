@@ -66,16 +66,28 @@
 
   .row {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
+
+    & > * {
+      min-width: 350px;
+    }
 
     &:not(.center) > * {
       flex-grow: 1;
       width: 0;
     }
 
-    & > * + * {
-      margin-left: 15px;
+    @media (min-width: 940px) {
+      & > * + * {
+        margin-left: 15px;
+      }
+    }
+
+    @media (not min-width: 940px) {
+      & > * + * {
+        margin-top: 15px;
+      }
     }
   }
 
