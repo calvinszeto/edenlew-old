@@ -2,23 +2,21 @@ app.controller 'ProjectsListCtrl',
   ['$scope', 'Projects', '$location', '$animate',
     ($scope, Projects, $location, $animate) ->
       $scope.projects = []
-      $scope.selectedCategories = [];
+      $scope.selectedCategory = null;
       $scope.categories = []
 
       collectCategories = (projects) ->
         $scope.categories = _.uniq(_.pluck(_.flatten(_.pluck(projects, 'categories')), 'name'))
 
-      $scope.isSelected = (category) ->
-        category in $scope.selectedCategories
-
       $scope.setCategory = (category) ->
-        if $scope.isSelected(category)
-          $scope.selectedCategories = _.reject($scope.selectedCategories, (cat) -> cat == category)
+        if $scope.selectedCategory == category
+          $scope.selectedCategory = null
         else
-          $scope.selectedCategories.push(category)
+          $scope.selectedCategory = category
 
       $scope.categoryComparator = (projectCategories, selectedCategories) ->
-        _.every(selectedCategories, (category) -> category in _.pluck(projectCategories, 'name'))
+        selectedCategory = selectedCategories[0]
+        !selectedCategory? || selectedCategory in _.pluck(projectCategories, 'name')
 
       $scope.showProject = (project) ->
         $animate.addClass('#animation-overlay', 'fade-out').then( ->
