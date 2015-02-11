@@ -13,11 +13,22 @@
   }
 
   p {
-    max-width: 620px;
+    margin: 0;
+    min-width: 350px;
+    flex-grow: 2;
+    width: 0;
   }
 
-  img + p {
-    margin-left: $gutter-width;
+  @media (max-width: 900px) {
+    img + p {
+      margin-top: $gutter-width;
+    }
+  }
+
+  @media (min-width: 900px) {
+    img + p {
+      margin-left: $gutter-width;
+    }
   }
 }
 
