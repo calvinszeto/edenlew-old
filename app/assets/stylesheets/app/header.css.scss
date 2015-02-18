@@ -6,6 +6,11 @@
   padding-bottom: 2*$gutter-width;
 
   .header {
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    -webkit-align-items: flex-end;
+    -webkit-justify-content: space-between;
+
     display: flex;
     flex-flow: row wrap;
     align-items: flex-end;
@@ -14,10 +19,14 @@
   }
 
   .header-logo {
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-align-items: flex-end;
+
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    
+
     img {
       cursor: pointer;
       width: 40px;

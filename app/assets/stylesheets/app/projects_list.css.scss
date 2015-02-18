@@ -6,6 +6,10 @@
 
 .project-icons {
   margin: 2*$gutter-width 0 $gutter-width;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
