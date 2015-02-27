@@ -2,8 +2,10 @@
   background-color: $header-background-color;
   text-transform: uppercase;
   font-weight: bold;
-  padding-top: $column-width;
-  padding-bottom: 2*$gutter-width;
+  height: 60px;
+  padding-top: 0.5*$gutter-width;
+  font-size: 0.85em;
+//  padding-bottom: 2*$gutter-width;
 
   .header {
     display: -webkit-flex;
@@ -29,8 +31,7 @@
 
     img {
       cursor: pointer;
-      width: 40px;
-      height: 60px;
+      height: 40px;
     }
   }
 
