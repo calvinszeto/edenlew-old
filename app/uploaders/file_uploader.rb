@@ -36,7 +36,7 @@ class FileUploader < CarrierWave::Uploader::Base
   end
 
   version :icon do
-    process :resize_to_fit => [220, 190]
+    process :resize_to_fit => [300, 240]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
