@@ -15,7 +15,11 @@ app.directive 'header',
               )
             )
 
-        $scope.moveToBottom = ->
-          $('html, body').scrollTop($(document).height())
-          return true
+        $scope.aboutMe = ->
+          if $location.path() != '/about_me'
+            $animate.addClass('#animation-overlay', 'fade-out').then( ->
+              $scope.$apply( ->
+                $location.path("/about_me")
+              )
+            )
     ]

@@ -8,5 +8,8 @@ app.config ['$routeProvider', ($routeProvider) ->
   ).when('/projects/:projectId',
     templateUrl: 'app/projects_show.html'
     controller: 'ProjectsShowCtrl'
-  )
+  ).when('/about_me',
+    templateUrl: 'app/about_me.html'
+    controller: 'AboutMeCtrl'
+  ).otherwise('/projects')
 ]
