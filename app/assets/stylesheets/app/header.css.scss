@@ -11,13 +11,28 @@
     display: -webkit-flex;
     -webkit-flex-flow: row wrap;
     -webkit-align-items: flex-end;
-    -webkit-justify-content: space-between;
+    -webkit-justify-content: center;
 
     display: flex;
     flex-flow: row wrap;
     align-items: flex-end;
-    justify-content: space-between;
+    justify-content: center;
     padding-left: $gutter-width;
+
+    margin-top: 25px;
+  }
+
+  .header-text {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+  .header-nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
   }
 
   .header-logo {
