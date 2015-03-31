@@ -36,6 +36,8 @@ GEM
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (2.0.1.20140626)
+      execjs
     bower-rails (0.7.3)
     builder (3.2.2)
     carrierwave (0.10.0)
@@ -238,6 +240,7 @@ PLATFORMS
 DEPENDENCIES
   angular-rails-templates
   annotate
+  autoprefixer-rails
   bower-rails
   carrierwave
   coffee-rails (~> 4.0.0)
